@@ -1,0 +1,245 @@
+/* General Dashboard Styling */
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+
+
+}
+p,a{
+  font-family: "Palanquin", serif;
+
+}
+h1,h2,h3{
+  font-family: "Josefin Sans", serif
+
+}
+/* Sidebar Styling */
+.sidebar {
+  width: 250px;
+  background-color: transparent; /* Keeping your color */
+  color: #2c3e50;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.sidebar-title {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+  color: #2c3e50;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  padding: 8px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.sidebar ul li a:hover {
+  background-color: transparent;
+}
+
+.logout {
+  margin-top: auto;
+  text-align: center;
+  padding: 15px;
+}
+
+.logout a {
+  color: #2c3e50;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* Main Content Styling */
+.dashboard-container.main-content {
+  margin-left: 270px; /* Adjusted for sidebar width */
+  padding: 80px;
+  flex-grow: 1;
+}
+
+.main-content h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Spices List */
+.spices-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr)); /* 4 items per row */
+  gap: 20px; /* Space between items */
+  flex-grow: 1;
+}
+
+/* Spice Card Container */
+.spice-card {
+  background: transparent;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  display: flex; /* Aligns children in a row */
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 500px;
+  max-width: 400px; /* Adjust as needed */
+  gap: 15px; /* Space between image and details */
+}
+
+/* Left Side - Spice Image */
+.spice-image img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Right Side - Spice Details & Edit Button */
+.spice-info {
+  display: flex;
+  align-items: right;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+/* Spice Title */
+.spice-info h3 {
+  font-size: 18px;
+  margin: 0;
+}
+
+/* Spice Details */
+.spice-info p {
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0;
+}
+
+/* Unavailable Item Styling */
+.not-available {
+  color: red;
+  font-weight: bold;
+}
+
+/* Edit Button */
+.edit-button {
+  background-color: #34495e;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: fit-content;
+  transition: background 0.3s;
+}
+
+.edit-button:hover {
+  background-color: #2c3e50;
+}
+
+/* No Spices Message */
+.spices-list div p {
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+}
+
+.spices-list div button {
+  background-color: #34495e;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.spices-list div button:hover {
+  background-color: #2c3e50;
+}
+
+/* Posts List */
+.posts-list {
+  margin-top: 40px;
+}
+
+.posts-list h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.post-card {
+  background: transparent;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.post-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.post-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+.post-card button {
+  background-color: #34495e;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.post-card button:hover {
+  background-color: #2c3e50;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .spices-list {
+    flex-direction: column;
+    align-items: center;
+  }
+}
