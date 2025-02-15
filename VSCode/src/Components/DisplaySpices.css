@@ -1,0 +1,86 @@
+/* Container for the spice details */
+.spice-details-container {
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+/* Spice name header */
+.spice-details-container h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Container for the image to control its size */
+.spice-image-container {
+  width: 45%;
+  margin: 0 auto;
+}
+
+/* Image styling */
+.spice-image-container img {
+  width: 45px; /* Ensure image scales within the container */
+  height: 45px;
+  object-fit: cover; /* Ensures the image does not stretch */
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+/* Paragraph text styling */
+.spice-details-container p {
+  font-size: 16px;
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+/* Buttons styling */
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0;
+  width: 100px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+button:nth-child(2) { /* Edit button */
+  background-color: #ffa500;
+  color: white;
+}
+
+button:nth-child(3) { /* Delete button */
+  background-color: #f44336;
+  color: white;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .spice-details-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .spice-details-container h3 {
+    font-size: 20px;
+  }
+
+  .spice-image-container {
+    max-width: 200px; 
+  }
+
+  button {
+    width: 90%;
+  }
+}
